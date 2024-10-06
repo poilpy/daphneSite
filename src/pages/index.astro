@@ -30,8 +30,8 @@ const projects = (await getCollection('work'))
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
 				<Hero
-					title="Hello, my name is Jeanine White"
-					tagline="I am a Creative Developer who is currently based in Portland, Oregon."
+					title="Hello, my name is Daphne"
+					tagline="I am a Top Image Consultant currently based in San Francisco, California."
 					align="start"
 				>
 					<div class="roles">
@@ -42,10 +42,10 @@ const projects = (await getCollection('work'))
 				</Hero>
 
 				<img
-					alt="Jeanine White smiling in a red plaid shirt and tortoise shell glasses"
+				alt="Daphne with dog."
 					width="480"
 					height="620"
-					src="/assets/portrait.jpg"
+					src="/assets/DaphneDog.jpg"
 				/>
 			</header>
 
@@ -60,13 +60,37 @@ const projects = (await getCollection('work'))
 				</header>
 
 				<div class="gallery">
-					<Grid variant="offset">
+					<Grid variant="small">
 						{
+
+							<img class="imageSpread"
+								alt="Daphne with dog."
+								width="300"
+								height="200"
+								src="/assets/DaphneBW.jpg"
+							/>
+
+							<img class="imageSpread"
+								alt="Daphne with dog."
+								width="300"
+								height="200"
+								src="/assets/DaphneSidewalk.jpg"
+							/>
+
+							<img class="imageSpread"
+								alt="Daphne with dog."
+								width="300"
+								height="200"
+								src="/assets/DaphneStairs.jpg"
+							/>
+
+							/*
 							projects.map((project) => (
 								<li>
 									<PortfolioPreview project={project} />
 								</li>
 							))
+							*/
 						}
 					</Grid>
 				</div>
@@ -148,6 +172,14 @@ const projects = (await getCollection('work'))
 	}
 
 	/* ====================================================== */
+
+	.imageSpread {
+		aspect-ratio: 2 / 4;
+		object-fit: cover;
+		object-position: center;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
 
 	.section {
 		display: grid;
