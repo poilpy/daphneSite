@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { ViewTransitions } from 'astro:transitions';
 
 interface Props {
 	title?: string | undefined;
@@ -7,8 +8,8 @@ interface Props {
 }
 
 const {
-	title = 'Jeanine White: Personal Site',
-	description = 'The personal site of Jeanine White',
+	title = 'Daphne Styles | Stylist | Personal Shopper',
+	description = 'Welcome to Daphne Styles - Stylist and Personal Shopper that will perfect your personal image.',
 } = Astro.props;
 ---
 
@@ -17,6 +18,10 @@ const {
 <meta name="viewport" content="width=device-width" />
 <meta name="generator" content={Astro.generator} />
 <title>{title}</title>
+
+<!--  Transitions break with dark mode but look cool
+<ViewTransitions />
+-->
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />

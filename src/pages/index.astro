@@ -11,6 +11,7 @@ import Hero from '../components/Hero.astro';
 import Icon from '../components/Icon.astro';
 import Pill from '../components/Pill.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
+// import Image from 'next/image';
 
 // Page section components
 import ContactCTA from '../components/ContactCTA.astro';
@@ -31,14 +32,14 @@ const projects = (await getCollection('work'))
 			<header class="hero">
 				<Hero
 					title="Hello, my name is Daphne"
-					tagline="I am a Top Image Consultant currently based in San Francisco, California."
+					tagline="I am a Top Stylist and Image Consultant currently based in San Francisco Bay Area. I can help you find your perfect look."
 					align="start"
 				>
-					<div class="roles">
+					<!-- <div class="roles">
 						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
 						<Pill><Icon icon="microphone-stage" size="1.33em" /> Speaker</Pill>
 						<Pill><Icon icon="pencil-line" size="1.33em" /> Writer</Pill>
-					</div>
+					</div> -->
 				</Hero>
 
 				<img
