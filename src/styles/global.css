@@ -1,6 +1,9 @@
 /* Global variables */
 :root {
 	/* Colors */
+	--tan: rgba(154, 150, 104, 0.543);
+	--tan2: rgba(253, 225, 206, 0.543);
+
 	--gray-0: #090b11;
 	--gray-50: #141925;
 	--gray-100: #283044;
