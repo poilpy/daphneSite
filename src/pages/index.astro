@@ -27,12 +27,12 @@ const projects = (await getCollection('work'))
 ---
 
 <BaseLayout>
-	<div class="stack gap-20 lg:gap-48">
+	<div class="stack gap-20 lg:gap-20">
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
 				<Hero
-					title="Hello, my name is Daphne"
-					tagline="I am a Top Stylist and Image Consultant currently based in San Francisco Bay Area. I can help you find your perfect look."
+					title="Hi! My name is Daphne Hooker"
+					tagline=" and I specialize in in-person shopping and online shopping, personal styling services for men, women and your whole family, preparing for travel and special events. Having trouble getting your online dating profile and pictures just right? I can help you with that too! "
 					align="start"
 				>
 					<!-- <div class="roles">
@@ -42,18 +42,17 @@ const projects = (await getCollection('work'))
 					</div> -->
 				</Hero>
 
-				<img
+				<img class=""
 				alt="Daphne with dog."
 					width="480"
-					height="620"
-					src="/assets/DaphneDog.jpg"
+					height="480"
+					src="/assets/bio page 10.jpg"
 				/>
 			</header>
 
-			<Skills />
+			<!-- <Skills /> -->
 		</div>
-		<div></div>
-		<main class="wrapper stack gap-20 lg:gap-48">
+		<!-- <main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-background with-cta box">
 				<header class="section-header stack gap-2 lg:gap-4 box">
 					<h3>Selected Work</h3>
@@ -84,14 +83,6 @@ const projects = (await getCollection('work'))
 								height="200"
 								src="/assets/DaphneStairs.jpg"
 							/>
-
-							/*
-							projects.map((project) => (
-								<li>
-									<PortfolioPreview project={project} />
-								</li>
-							))
-							*/
 						}
 					</Grid>
 				</div>
@@ -102,9 +93,9 @@ const projects = (await getCollection('work'))
 						<Icon icon="arrow-right" size="1.2em" />
 					</CallToAction>
 				</div>
-			</section>
+			</section> -->
 
-			<section class="section with-background bg-variant box">
+			<!-- <section class="section with-background bg-variant box">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>Mentions</h3>
 					<p>
@@ -124,8 +115,10 @@ const projects = (await getCollection('work'))
 						}
 					</Grid>
 				</div>
-			</section>
+			</section> 
+
 		</main>
+		-->
 
 		<ContactCTA />
 	</div>
@@ -134,7 +127,7 @@ const projects = (await getCollection('work'))
 <style>
 	.box {
 		border: 1px solid var(--gray-800);
-		border-radius: 0.75rem;
+		/* border-radius: 0.75rem; */
 		padding: 1.5rem;
 		background-color: var(--gray-999_40);
 		box-shadow: var(--shadow-sm);
@@ -152,10 +145,9 @@ const projects = (await getCollection('work'))
 	}
 
 	.hero img {
-		aspect-ratio: 5 / 4;
+		aspect-ratio: 4 / 4;
 		object-fit: cover;
 		object-position: top;
-		border-radius: 1.5rem;
 		box-shadow: var(--shadow-md);
 	}
 
@@ -174,9 +166,9 @@ const projects = (await getCollection('work'))
 		}
 
 		.hero img {
-			aspect-ratio: 3 / 4;
-			border-radius: 4.5rem;
+			aspect-ratio: 4 / 5;
 			object-fit: cover;
+			border: 2px solid;
 		}
 	}
 
@@ -186,7 +178,7 @@ const projects = (await getCollection('work'))
 		aspect-ratio: 2 / 4;
 		object-fit: cover;
 		object-position: center;
-		border-radius: 1.5rem;
+		/* border-radius: 1.5rem; */
 		box-shadow: var(--shadow-md);
 	}
 
@@ -279,7 +271,7 @@ const projects = (await getCollection('work'))
 		align-items: center;
 		text-align: center;
 		border: 1px solid var(--gray-800);
-		border-radius: 1.5rem;
+		/* border-radius: 1.5rem; */
 		color: var(--gray-300);
 		background: var(--gradient-subtle);
 		box-shadow: var(--shadow-sm);
@@ -287,7 +279,7 @@ const projects = (await getCollection('work'))
 
 	@media (min-width: 50em) {
 		.mention-card {
-			border-radius: 1.5rem;
+			/* border-radius: 1.5rem; */
 			height: 9.5rem;
 		}
 	}

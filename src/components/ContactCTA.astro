@@ -3,9 +3,12 @@ import CallToAction from './CallToAction.astro';
 import Icon from './Icon.astro';
 ---
 
-<aside>
-	<h2>Interested in working together?</h2>
-	<CallToAction href="mailto:me@example.com">
+<aside class="">
+	<h2>Contact me for a free 20 minute consult!</h2>
+	<h2>voice and text:<p>(415) 218-0457</p></h2>
+	
+	<h5>hookerdaphne@gmail.com</h5>
+	<CallToAction href="mailto:hookerdaphne@gmail.com">
 		Send Me a Message
 		<Icon icon="paper-plane-tilt" size="1.2em" />
 	</CallToAction>
@@ -32,7 +35,7 @@ import Icon from './Icon.astro';
 
 	@media (min-width: 50em) {
 		aside {
-			padding: 7.5rem;
+			padding: 5rem;
 			flex-direction: row;
 			flex-wrap: wrap;
 			justify-content: space-between;
@@ -41,6 +44,10 @@ import Icon from './Icon.astro';
 		h2 {
 			font-size: var(--text-3xl);
 			text-align: left;
+		}
+
+		p {
+			
 		}
 	}
 </style>
