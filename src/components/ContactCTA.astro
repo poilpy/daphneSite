@@ -3,11 +3,13 @@ import CallToAction from './CallToAction.astro';
 import Icon from './Icon.astro';
 ---
 
-<aside class="">
-	<h2>Contact me for a free 20 minute consult!</h2>
-	<h2>voice and text:<p>(415) 218-0457</p></h2>
-	
-	<h5>hookerdaphne@gmail.com</h5>
+<aside class="bg-gradient-to-l from-zinc-400 to-zinc-300">
+	<h1>Contact me for a free 20 minute consult!</h1>
+	<h2>Voice and Text:<p>(415) 218-0457</p></h2>
+	<h2>Email: <p>hookerdaphne@gmail.com</p></h2>
+	<div/>
+	<div/>
+	<div/>
 	<CallToAction href="mailto:hookerdaphne@gmail.com">
 		Send Me a Message
 		<Icon icon="paper-plane-tilt" size="1.2em" />
@@ -28,21 +30,27 @@ import Icon from './Icon.astro';
 	}
 
 	h2 {
-		font-size: var(--text-xl);
+		font-size: var(--text-md);
 		text-align: center;
 		max-width: 15ch;
 	}
 
 	@media (min-width: 50em) {
 		aside {
-			padding: 5rem;
+			padding: 4rem;
 			flex-direction: row;
 			flex-wrap: wrap;
 			justify-content: space-between;
 		}
 
+		h1 {
+			font-size: var(--text-xl);
+			text-align: left;
+			max-width: 15ch;
+		}
+		
 		h2 {
-			font-size: var(--text-3xl);
+			font-size: var(--text-lg);
 			text-align: left;
 		}
 

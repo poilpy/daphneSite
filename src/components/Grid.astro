@@ -6,17 +6,107 @@ interface Props {
 const { variant } = Astro.props;
 ---
 
-<ul class:list={['grid', { offset: variant === 'offset', small: variant === 'small' }]}>
-	<slot />
+<ul class:list={['grid', { offset: variant === 'offset', small: variant === 'small' }]}
+	style="
+		--quantity: 8;">
+	<img class="imageSpread"
+		style="--position: 1"
+		alt="grid1."
+		width=" 100"
+		height="200"
+		src="/assets/grid/grid1.jpg"
+	/>
+
+	<img class="imageSpread"
+		style="--position: 2"
+		alt="grid1."
+		width=" 100"
+		height="200"
+		src="/assets/grid/grid2.jpg"
+	/>
+
+	<img class="imageSpread"
+		style="--position: 3"
+		alt="grid1."
+		width=" 100"
+		height="200"
+		src="/assets/grid/grid3.jpg"
+	/>
+
+	<img class="imageSpread"
+		style="--position: 4"
+		alt="grid1."
+		width=" 100"
+		height="200"
+		src="/assets/grid/grid4.jpg"
+	/>
+
+	<img class="imageSpread"
+		style="--position: 5"
+		alt="grid1."
+		width=" 100"
+		height="200"
+		src="/assets/grid/grid8.jpg"
+	/>
+	
+	<img class="imageSpread"
+		style="--position: 6"
+		alt="grid1."
+		width=" 100"
+		height="200"
+		src="/assets/grid/grid5.jpg"
+	/>
+
+	<img class="imageSpread"
+		style="--position: 7"
+		alt="grid1."
+		width=" 100"
+		height="200"
+		src="/assets/grid/grid6.jpg"
+	/>
+
+	<img class="imageSpread"
+		style="--position: 8"
+		alt="grid1."
+		width=" 100"
+		height="200"
+		src="/assets/grid/grid7.jpg"
+	/>
+
 </ul>
 
 <style>
+	
+
+	
+	.imageSpread {
+		aspect-ratio: 2 / 4;
+		object-fit: cover;
+		/* border-radius: 1.5rem; */
+		box-shadow: var(--shadow-md);
+		/* left: 100%; */
+
+		/* animation: 5s scrolling infinite linear;  */
+		/* animation-delay: calc((10s/var(--quantity)) * var(--position) - 1); */
+	}
+	
+	@keyframes scrolling {
+		from {
+			transform: translate(100%);
+		}
+		to {
+			transform: translate(50%));
+		}
+		
+	}
+
 	.grid {
 		display: grid;
 		grid-auto-rows: 1fr;
 		gap: 1rem;
 		list-style: none;
 		padding: 0;
+		white-space: nowrap;
 	}
 
 	.grid.small {
@@ -53,13 +143,17 @@ const { variant } = Astro.props;
 
 		.grid.small {
 			display: flex;
-			flex-wrap: wrap;
+			/* flex-wrap: wrap; */
 			justify-content: center;
-			gap: 2rem;
+			width: 100%;
+			height: 80%;
+			gap: .01rem;
+			/* position: relative; */
 		}
 
 		.grid.small > :global(*) {
-			flex-basis: 20rem;
+			flex-basis: 100%;
+			white-space: nowrap;
 		}
 	}
 </style>
