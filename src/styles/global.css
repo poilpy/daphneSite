@@ -71,9 +71,13 @@
 	--text-5xl: 4.5rem;
 
 	/* Fonts */
-	--font-system: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	/* --font-system: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	--font-body: 'HelveticaNeue-Light', var(--font-system);
-	--font-brand: 'HelveticaNeue-Light', var(--font-system);
+	--font-brand: 'HelveticaNeue-Light', var(--font-system); */
+
+	--font-system: "belleza";
+	--font-body: 'belleza', var(--font-system);
+	--font-brand: 'belleza', var(--font-system);
 
 	/* Transitions */
 	--theme-transition: 0.2s ease-in-out;
@@ -259,3 +263,9 @@ h5 {
 		gap: 12rem;
 	}
 }
+
+.libre-caslon-text-regular-italic {
+	font-family: "Libre Caslon Text", serif;
+	font-weight: 400;
+	font-style: italic;
+  }

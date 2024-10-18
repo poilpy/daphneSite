@@ -86,16 +86,16 @@ const { variant } = Astro.props;
 		box-shadow: var(--shadow-md);
 		/* left: 100%; */
 
-		/* animation: 5s scrolling infinite linear;  */
+		/* animation: 2s scrolling infinite linear;  */
 		/* animation-delay: calc((10s/var(--quantity)) * var(--position) - 1); */
 	}
 	
 	@keyframes scrolling {
 		from {
-			transform: translate(100%);
+			transform: translate(0%);
 		}
 		to {
-			transform: translate(50%));
+			transform: translate(-100%);
 		}
 		
 	}
