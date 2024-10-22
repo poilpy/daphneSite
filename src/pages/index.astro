@@ -27,6 +27,8 @@ const gallery: { alt: string; src: string }[] = [
 	{ alt: 'Personal Shopping', src: '/services' },
 ];
 
+
+
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
 ---
@@ -36,8 +38,7 @@ const gallery: { alt: string; src: string }[] = [
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
 				<Hero
-					title="Hi! My name is Daphne Hooker"
-					tagline="and I specialize in personal styling services for men, women (and your whole family), in-person and online shopping, preparing for travel and special events. Having trouble getting your online dating profile and pictures just right? I can help you with that too!  "
+					title="Hi!"
 					align="start"
 				>
 					<!-- <div class="roles">
@@ -63,30 +64,55 @@ const gallery: { alt: string; src: string }[] = [
 		</div>
 
 
-			<!-- <section class="section with-background bg-variant box">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Mentions</h3>
-					<p>
-						I have been fortunate enough to receive praise for my work in several publications. Take
-						a look below to learn more.
-					</p>
-				</header>
+		<section class="section  box">
 
-				<div class="gallery">
-					<Grid variant="small">
-						{
-							['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (
-								<li class="mention-card">
-									<p>{brand}</p>
-								</li>
-							))
-						}
-					</Grid>
+				<div class="border border-gray-800 shadow-sm">
+					<figure class="flex flex-col items-center justify-center p-8 text-center  border-b border-gray-400 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e dark:bg-gray-800 dark:border-gray-700">
+						<blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+							<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Very easy this was to integrate</h3>
+							<p class="my-4">If you care for your time, I hands down would go with this."</p>
+						</blockquote>
+						<figcaption class="flex items-center justify-center ">
+							<img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture">
+							<div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+								<div>Bonnie Green</div>
+								<div class="text-sm text-gray-500 dark:text-gray-400 ">Developer at Open AI</div>
+							</div>
+						</figcaption>    
+					</figure>
+					<figure class="flex flex-col items-center justify-center p-8 text-center  border-b border-gray-400 md:rounded-se-lg dark:bg-gray-800 dark:border-gray-700">
+						<blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+							<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Solid foundation for any project</h3>
+							<p class="my-4">Designing with Figma components that can be easily translated to the utility classes of Tailwind CSS is a huge timesaver!"</p>
+						</blockquote>
+						<figcaption class="flex items-center justify-center ">
+							<img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png" alt="profile picture">
+							<div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+								<div>Roberta Casas</div>
+								<div class="text-sm text-gray-500 dark:text-gray-400">Lead designer at Dropbox</div>
+							</div>
+						</figcaption>    
+					</figure>
+					<figure class="flex flex-col items-center justify-center p-8 text-center  border-b border-gray-400 md:rounded-es-lg md:border-b-0 md:border-e dark:bg-gray-800 dark:border-gray-700">
+						<blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+							<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Mindblowing workflow</h3>
+							<p class="my-4">Aesthetically, the well designed components are beautiful and will undoubtedly level up your next application."</p>
+						</blockquote>
+						<figcaption class="flex items-center justify-center ">
+							<img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="profile picture">
+							<div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+								<div>Jese Leos</div>
+								<div class="text-sm text-gray-500 dark:text-gray-400">Software Engineer at Facebook</div>
+							</div>
+						</figcaption>    
+					</figure>
+					
 				</div>
-			</section> 
+
+
+		</section> 
 
 		</main>
-		-->
 
 		<ContactCTA />
 	</div>
@@ -145,7 +171,7 @@ const gallery: { alt: string; src: string }[] = [
 
 
 	.section {
-		display: grid;
+		display: block;
 		gap: 2rem;
 	}
 
@@ -183,7 +209,7 @@ const gallery: { alt: string; src: string }[] = [
 		text-align: center;
 		max-width: 50ch;
 		font-size: var(--text-md);
-		color: var(--gray-200);
+		color: var(--gray-400);
 	}
 
 	.section-header h3 {
@@ -234,7 +260,7 @@ const gallery: { alt: string; src: string }[] = [
 		text-align: center;
 		border: 1px solid var(--gray-800);
 		/* border-radius: 1.5rem; */
-		color: var(--gray-200);
+		color: var(--gray-400);
 		background: var(--gradient-subtle);
 		box-shadow: var(--shadow-sm);
 	}

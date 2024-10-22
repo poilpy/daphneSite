@@ -8,12 +8,12 @@ import Icon from './Icon.astro';
 	<h2>Voice and Text:<p>(415) 218-0457</p></h2>
 	<h2>Email: <p>hookerdaphne@gmail.com</p></h2>
 	<div/>
-	<div/>
-	<div/>
 	<CallToAction href="mailto:hookerdaphne@gmail.com">
 		Send Me a Message
 		<Icon icon="paper-plane-tilt" size="1.2em" />
 	</CallToAction>
+	
+	<h3 class="italic font-semibold text-stone-950">SPECIAL: <p>First time clients who book 3+ hours get 1 hour free of online shopping.</p></h3>
 </aside>
 
 <style>
@@ -29,15 +29,27 @@ import Icon from './Icon.astro';
 		box-shadow: var(--shadow-sm);
 	}
 
+	h1 {
+		font-size: var(--text-xl);
+		text-align: center;
+		max-width: 30ch;
+	}
+
 	h2 {
 		font-size: var(--text-md);
 		text-align: center;
-		max-width: 15ch;
+		max-width: 25ch;
+	}
+
+	h3 {
+		font-size: var(--text-xl);
+		text-align: center;
+		max-width: 35ch;
 	}
 
 	@media (min-width: 50em) {
 		aside {
-			padding: 4rem;
+			padding: 3rem;
 			flex-direction: row;
 			flex-wrap: wrap;
 			justify-content: space-between;
@@ -52,6 +64,13 @@ import Icon from './Icon.astro';
 		h2 {
 			font-size: var(--text-lg);
 			text-align: left;
+		}
+
+		
+		h3 {
+			font-size: var(--text-2xl);
+			text-align: left;
+			max-width: 225ch;
 		}
 
 		p {
