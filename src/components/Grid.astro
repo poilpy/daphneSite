@@ -1,4 +1,7 @@
 ---
+
+import { Image } from 'astro:assets';
+
 interface Props {
 	variant?: 'offset' | 'small';
 }
@@ -9,68 +12,68 @@ const { variant } = Astro.props;
 <ul class:list={['grid', { offset: variant === 'offset', small: variant === 'small' }]}
 	style="
 		--quantity: 8;">
-	<img class="imageSpread"
+	<Image class="imageSpread"
 		style="--position: 1"
 		alt="grid1."
 		width=" 100"
 		height="200"
-		src="/assets/grid/grid1.jpg"
+		src="/assets/home/zoe blazer.jpg"
 	/>
 
-	<img class="imageSpread"
+	<Image class="imageSpread"
 		style="--position: 2"
-		alt="grid1."
+		alt="grid2."
 		width=" 100"
 		height="200"
-		src="/assets/grid/grid2.jpg"
+		src="/assets/home/scene 1.jpeg"
 	/>
 
-	<img class="imageSpread"
+	<Image class="imageSpread"
 		style="--position: 3"
-		alt="grid1."
+		alt="grid3."
 		width=" 100"
 		height="200"
-		src="/assets/grid/grid3.jpg"
+		src="/assets/home/man shopping.jpeg"
 	/>
 
-	<img class="imageSpread"
+	<Image class="imageSpread"
 		style="--position: 4"
-		alt="grid1."
+		alt="grid4."
 		width=" 100"
 		height="200"
-		src="/assets/grid/grid4.jpg"
+		src="/assets/home/iro blazer.jpg"
 	/>
 
-	<img class="imageSpread"
+	<Image class="imageSpread"
 		style="--position: 5"
-		alt="grid1."
+		alt="grid5."
 		width=" 100"
 		height="200"
-		src="/assets/grid/grid8.jpg"
+		src="/assets/home/DaphneBag.jpg"
 	/>
 	
-	<img class="imageSpread"
+	<Image class="imageSpread"
 		style="--position: 6"
-		alt="grid1."
+		alt="grid6."
 		width=" 100"
 		height="200"
-		src="/assets/grid/grid5.jpg"
+		src="/assets/home/rack1.jpg"
 	/>
 
-	<img class="imageSpread"
+	<Image class="imageSpread"
 		style="--position: 7"
-		alt="grid1."
+		alt="grid7."
 		width=" 100"
 		height="200"
-		src="/assets/grid/grid6.jpg"
+		src="/assets/home/stripe shirt2.jpg"
 	/>
 
-	<img class="imageSpread"
+	<Image class="imageSpread"
 		style="--position: 8"
-		alt="grid1."
+		alt="grid8."
 		width=" 100"
 		height="200"
-		src="/assets/grid/grid7.jpg"
+		src="/assets/home/zoe garden.jpg"
 	/>
 
 </ul>
@@ -80,7 +83,7 @@ const { variant } = Astro.props;
 
 	
 	.imageSpread {
-		aspect-ratio: 2 / 4;
+		aspect-ratio: 2 / 3;
 		object-fit: cover;
 		/* border-radius: 1.5rem; */
 		box-shadow: var(--shadow-md);
@@ -119,7 +122,7 @@ const { variant } = Astro.props;
 		grid-column: 1 / 3;
 	}
 
-	@media (min-width: 50em) {
+	/* @media (min-width: 50em) { */
 		.grid {
 			grid-template-columns: 1fr 1fr;
 			gap: 4rem;
@@ -155,5 +158,5 @@ const { variant } = Astro.props;
 			flex-basis: 100%;
 			white-space: nowrap;
 		}
-	}
+	/* } */
 </style>

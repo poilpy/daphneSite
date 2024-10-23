@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
 
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from '../layouts/BaseLayout.astro';
@@ -34,75 +35,77 @@ const gallery: { alt: string; src: string }[] = [
 ---
 
 <BaseLayout>
-	<div class="stack gap-10 lg:gap-10">
-		<div class="wrapper stack gap-8 lg:gap-20">
+	<div class=" gap-10 lg:gap-10">
+		<div class="  gap-8 lg:gap-20">
 			<header class="hero">
+				
+
+				<Image class="imCover"
+				
+					alt="Daphne with dog."
+					width="480"
+					height="480"
+					src="/assets/bio page 10.jpg"
+					/>
+				
+				<!-- <img class="imCover"
+					alt="Daphne with dog."
+						width="480"
+						height="480"
+						src="/assets/bio page 10.jpg"
+					/> -->
 				<Hero
 					title="Hi!"
 					align="start"
 				>
-					<!-- <div class="roles">
-						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
-						<Pill><Icon icon="microphone-stage" size="1.33em" /> Speaker</Pill>
-						<Pill><Icon icon="pencil-line" size="1.33em" /> Writer</Pill>
-					</div> -->
 				</Hero>
-
-				<img class=""
-				alt="Daphne with dog."
-					width="480"
-					height="480"
-					src="/assets/bio page 10.jpg"
-				/>
 			</header>
-
-			<!-- <Skills /> -->
 		</div>
 		<div class="gallery">
 			<Grid variant="small">
 
 		</div>
-
+ 
 
 		<section class="section  box">
 
 				<div class="border border-gray-800 shadow-sm">
-					<figure class="flex flex-col items-center justify-center p-8 text-center  border-b border-gray-400 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e dark:bg-gray-800 dark:border-gray-700">
-						<blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-							<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Very easy this was to integrate</h3>
+					<figure class="flex flex-col items-center justify-center p-8 text-center  border-b border-gray-400 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e">
+						<blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 ">
+							<h3 class="text-lg font-semibold text-gray-900 ">Very easy this was to integrate</h3>
 							<p class="my-4">If you care for your time, I hands down would go with this."</p>
 						</blockquote>
 						<figcaption class="flex items-center justify-center ">
 							<img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture">
-							<div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+							<div class="space-y-0.5 font-medium  text-left rtl:text-right ms-3">
 								<div>Bonnie Green</div>
-								<div class="text-sm text-gray-500 dark:text-gray-400 ">Developer at Open AI</div>
+								<div class="text-sm text-gray-500 ">Developer at Open AI</div>
 							</div>
 						</figcaption>    
 					</figure>
-					<figure class="flex flex-col items-center justify-center p-8 text-center  border-b border-gray-400 md:rounded-se-lg dark:bg-gray-800 dark:border-gray-700">
-						<blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-							<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Solid foundation for any project</h3>
+					<figure class="flex flex-col items-center justify-center p-8 text-center  border-b border-gray-400 md:rounded-se-lg">
+						<blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 ">
+							<h3 class="text-lg font-semibold text-gray-900 ">Solid foundation for any project</h3>
 							<p class="my-4">Designing with Figma components that can be easily translated to the utility classes of Tailwind CSS is a huge timesaver!"</p>
 						</blockquote>
 						<figcaption class="flex items-center justify-center ">
 							<img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png" alt="profile picture">
-							<div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+							<div class="space-y-0.5 font-medium  text-left rtl:text-right ms-3">
 								<div>Roberta Casas</div>
-								<div class="text-sm text-gray-500 dark:text-gray-400">Lead designer at Dropbox</div>
+								<div class="text-sm text-gray-500 ">Lead designer at Dropbox</div>
 							</div>
 						</figcaption>    
 					</figure>
-					<figure class="flex flex-col items-center justify-center p-8 text-center  border-b border-gray-400 md:rounded-es-lg md:border-b-0 md:border-e dark:bg-gray-800 dark:border-gray-700">
-						<blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-							<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Mindblowing workflow</h3>
+					<figure class="flex flex-col items-center justify-center p-8 text-center  border-b border-gray-400 md:rounded-es-lg md:border-b-0 md:border-e">
+						<blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 ">
+							<h3 class="text-lg font-semibold text-gray-900 ">Mindblowing workflow</h3>
 							<p class="my-4">Aesthetically, the well designed components are beautiful and will undoubtedly level up your next application."</p>
 						</blockquote>
 						<figcaption class="flex items-center justify-center ">
 							<img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="profile picture">
-							<div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+							<div class="space-y-0.5 font-medium  text-left rtl:text-right ms-3">
 								<div>Jese Leos</div>
-								<div class="text-sm text-gray-500 dark:text-gray-400">Software Engineer at Facebook</div>
+								<div class="text-sm text-gray-500 ">Software Engineer at Facebook</div>
 							</div>
 						</figcaption>    
 					</figure>
@@ -119,6 +122,12 @@ const gallery: { alt: string; src: string }[] = [
 </BaseLayout>
 
 <style>
+
+	.intro {
+		display: flexbox;
+		flex-flow: column;
+	}
+
 	.box {
 		border: 1px solid var(--gray-800);
 		/* border-radius: 0.75rem; */
@@ -138,11 +147,17 @@ const gallery: { alt: string; src: string }[] = [
 		display: none;
 	}
 
-	.hero img {
+	.blurb {
+		order: 2;
+	}
+
+	.imCover {
 		/* aspect-ratio: 4 / 4; */
+		margin: 1rem;
 		object-fit: cover;
-		object-position: top;
+		object-position: center;
 		box-shadow: var(--shadow-md);
+		order: -2;
 	}
 
 	@media (min-width: 50em) {
@@ -163,6 +178,7 @@ const gallery: { alt: string; src: string }[] = [
 		.hero img {
 			aspect-ratio: 4 / 5;
 			object-fit: cover;
+			order: 2;
 			/* border: 1px solid; */
 		}
 	}
