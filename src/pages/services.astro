@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
 
 import BaseLayout from '../layouts/BaseLayout.astro';
 
@@ -18,23 +19,157 @@ const projects = (await getCollection('work')).sort(
 	description="Learn about Jeanine White's most recent projects"
 >
 	<div class="stack gap-20">
-		<main class="wrapper stack gap-8">
+		<main class="wrapper stack gap-2">
+
+			<div class="flex w-full gap-4 section">
+				<div class="grid h-20 flex-grow desc">
+				<h3>Personal Shopping</h3>
+				<p>Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
+					natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
+					condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
+					quam elementum pulvinar etiam non.</p>
+				</div>
+				<Image class="im"
+				
+					alt="Personal Shopping"
+					width="360"
+					height="360"
+					src="/assets/services/bio_rack 6.jpg"
+					/>
+
+			</div>
+			<hr class="h-px my-4 bg-zinc-500 border-0">
+
+			<div class="flex w-full gap-4 section">
+				<Image class="im"
+				
+					alt="closet clean out"
+					width="360"
+					height="480"
+					src="/assets/services/closet clean out pic.jpeg"
+					/>
+				<div class="grid h-20 flex-grow desc">
+					<h3>Closet Clean Out </h3>
+					<p>Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
+					natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
+					condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
+					quam elementum pulvinar etiam non.</p>
+				</div>
+			</div>
+			<hr class="h-px my-4 bg-zinc-500 border-0">
 			
-			personal shopping -  bio rack 6
+			<div class="flex w-full gap-4 section">
+				<div class="grid h-20 flex-grow desc">
+				<h3>Online Shopping</h3>
+				<p>Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
+					natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
+					condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
+					quam elementum pulvinar etiam non.</p>
+				</div>
+				<Image class="im"
+				
+					alt="Personal Shopping"
+					width="360"
+					height="360"
+					src="/assets/services/bio_rack 4.jpg"
+					/>
 
-			closet clean out  - closet clean out pic 
+			</div>
+			<hr class="h-px my-4 bg-zinc-500 border-0">
 
-			online shopping - bio rack 4 
+			<div class="flex w-full gap-4 section">
+				<Image class="im"
+				
+					alt="Personal Shopping"
+					width="360"
+					height="360"
+					src="/assets/DaphneDog.jpg"
+					/>
+				<div class="grid h-20 flex-grow desc">
+				<h3>Online Dating Profile Assistance</h3>
+				<p>Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
+					natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
+					condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
+					quam elementum pulvinar etiam non.</p>
+				</div>
 
-			dating 
+			</div>
+			<hr class="h-px my-4 bg-zinc-500 border-0">
 
-			photo shoot  - dress flowers 
+			<div class="flex w-full gap-4 section">
+				<div class="grid h-20 flex-grow desc">
+				<h3>Photo Shoot</h3>
+				<p>Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
+					natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
+					condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
+					quam elementum pulvinar etiam non.</p>
+				</div>
+				<Image class="im"
+				
+					alt="photo shoot"
+					width="360"
+					height="360"
+					src="/assets/services/dress flowers.jpg"
+					/>
 
-			teens & kids - mom with little girl
+			</div>
+			<hr class="h-px my-4 bg-zinc-500 border-0">
 
-			gifts - gifts 
+			<div class="flex w-full gap-4 section">
+				<Image class="im"
+				
+					alt="teens & kids"
+					width="360"
+					height="360"
+					src="/assets/services/mom with little girl.jpeg"
+					/>
+				<div class="grid h-20 flex-grow desc">
+				<h3>Teens & Kids</h3>
+				<p>Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
+					natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
+					condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
+					quam elementum pulvinar etiam non.</p>
+				</div>
 
-			a la carte - pink sweater 
+			</div>
+			<hr class="h-px my-4 bg-zinc-500 border-0">
+
+			<div class="flex w-full gap-4 section">
+				<div class="grid h-20 flex-grow desc">
+				<h3>Gifts</h3>
+				<p>Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
+					natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
+					condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
+					quam elementum pulvinar etiam non.</p>
+				</div>
+				<Image class="im"
+				
+					alt="gifts"
+					width="360"
+					height="360"
+					src="/assets/services/gifts.jpeg"
+					/>
+
+			</div>
+			<hr class="h-px my-4 bg-zinc-500 border-0">
+
+			<div class="flex w-full gap-4 section">
+				<Image class="im"
+				
+					alt="A La Carte"
+					width="360"
+					height="360"
+					src="/assets/services/pink sweater.jpg"
+					/>
+				<div class="grid h-20 flex-grow desc">
+				<h3>A La Carte</h3>
+				<p>Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
+					natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
+					condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
+					quam elementum pulvinar etiam non.</p>
+				</div>
+
+			</div>
 
 
 			
@@ -47,13 +182,29 @@ const projects = (await getCollection('work')).sort(
 <style>
 
 	.section {
-
+		font-size: var(--text-lg);
+		display: flex;
+		margin: 1rem;
 	}
 
 	.desc {
-
+		margin-top: 2rem;
 	}
 
+	.im {
+		
+		aspect-ratio: 2 / 3;
+		object-fit: cover;
+		box-shadow: var(--shadow-md);
+	}
+
+	@media (max-width: 50em) {
+		
+		.section {
+			font-size: var(--text-sm);
+			margin: 1rem;
+		}
+	}
 	
 
 </style>
