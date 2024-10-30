@@ -3,24 +3,29 @@ import CallToAction from './CallToAction.astro';
 import Icon from './Icon.astro';
 ---
 
-<aside class="bg-gradient-to-l from-zinc-400 to-zinc-300">
-	<h1>Contact me for a free 20 minute consult!</h1>
-	<h2>Voice and Text:<p>(415) 218-0457</p></h2>
-	<h2>Email: <p>hookerdaphne@gmail.com</p></h2>
-	<div/>
-	<CallToAction href="mailto:hookerdaphne@gmail.com">
-		Send Me a Message
-		<Icon icon="paper-plane-tilt" size="1.2em" />
-	</CallToAction>
-	
-	<h3 class="italic font-semibold text-stone-950">SPECIAL: <p>First time clients who book 3+ hours get 1 hour free of online shopping.</p></h3>
+<aside class="bg-gradient-to-l from-zinc-400 to-zinc-300 space-y-5">
+	<div class="grid grid-cols-3">
+		<h1 class="">Contact me for a free 20 minute consult!</h1>
+		<h2>
+			Voice and Text:<br> <a href="tel:4152180457" class="text-blue-700 hover:text-blue-400">(415) 218-0457</a> 
+			<br>
+			Email: <a href="mailto:hookerdaphne@gmail.com" class="text-blue-700 hover:text-blue-400">hookerdaphne@gmail.com</a>
+		</h2>
+		<h3 class="italic font-semibold text-stone-950">SPECIAL: <p>First time clients who book 3+ hours get 1 hour free of online shopping.</p></h3>
+	</div>
+	<div class="">
+		<CallToAction href="mailto:hookerdaphne@gmail.com">
+			Send Me a Message
+			<Icon icon="paper-plane-tilt" size="1.2em" />
+		</CallToAction>
+	</div>
 </aside>
 
 <style>
 	aside {
-		display: flex;
+		/* display: flex;
 		flex-direction: column;
-		align-items: center;
+		align-items: center; */
 		gap: 3rem;
 		border-top: 1px solid var(--gray-800);
 		border-bottom: 1px solid var(--gray-800);
@@ -28,6 +33,8 @@ import Icon from './Icon.astro';
 		background-color: var(--gray-999_40);
 		box-shadow: var(--shadow-sm);
 	}
+
+	
 
 	h1 {
 		font-size: var(--text-xl);
@@ -49,14 +56,15 @@ import Icon from './Icon.astro';
 
 	@media (min-width: 50em) {
 		aside {
-			padding: 3rem;
+			padding: 4rem;
+			
 			flex-direction: row;
 			flex-wrap: wrap;
 			justify-content: space-between;
 		}
 
 		h1 {
-			font-size: var(--text-xl);
+			font-size: var(--text-2xl);
 			text-align: left;
 			max-width: 15ch;
 		}
@@ -76,5 +84,7 @@ import Icon from './Icon.astro';
 		p {
 			
 		}
+
+		
 	}
 </style>
