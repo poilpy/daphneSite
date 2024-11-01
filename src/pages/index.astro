@@ -40,7 +40,7 @@ const gallery: { alt: string; src: string }[] = [
 			<header class="hero">
 				
 
-				<Image class="imCover"
+				<Image class="imCover" loading="eager" 
 				
 					alt="Daphne with dog."
 					width="480"
@@ -67,10 +67,10 @@ const gallery: { alt: string; src: string }[] = [
 
 		</div>
 
-		<section class=" grid bg-gradient-to-l from-zinc-100 to-orange-100 p-4 grid-cols-2">
+		<section class=" grid bg-gradient-to-l from-zinc-100 to-orange-100 gap-4 p-4 md:grid-cols-2">
 			<div>
 				<h2>How It Works:</h2>
-				<p class="text-xl p-2">
+				<p class="md:text-xl p-2">
 					Please take a moment to review my list of services and we’ll schedule a free consultation to discuss your needs and get the process started! 
 					I'll email you a brief questionnaire to gather information about your goals, clothing preferences and a little bit about yourself. 
 					<br>
@@ -78,34 +78,34 @@ const gallery: { alt: string; src: string }[] = [
 					incorporating new items, or creating an entirely new wardrobe. I charge by the hour, and I’ll provide my hourly rate when you reach out. 
 					I can tailor and combine all of my services to ensure that your needs are fully met. If you have more questions feel free to reach out by voice, text or email. 
 					<br>
-					<p class="p-3 text-xl">
-						Voice and Text:<br> <a href="tel:4152180457" class="text-blue-700 hover:text-blue-400">(415) 218-0457</a> 
+					<p class="p-3 text-xl text-center">
+						Take charge of your look and call or text<br> <a href="tel:4152180457" class="text-blue-700 hover:text-blue-400">(415) 218-0457</a> 
 						<br>
 						Email: <br> <a href="mailto:hookerdaphne@gmail.com" class="text-blue-700 hover:text-blue-400">hookerdaphne@gmail.com</a>
 					</p>
 				</p>
 				<CallToAction href="mailto:hookerdaphne@gmail.com">
-					Send Me a Message
+					Send Me a Message!
 					<Icon icon="paper-plane-tilt" size="1.2em" />
 				</CallToAction>
 			</div>
-			<div class=" grid md:grid-cols-2 px-8 gap-2 text-4xl">
+			<div class=" grid md:grid-cols-2 px-4 gap-2 text-4xl">
 				
-				<a href="/services/#personal_shopping" class="border-zinc-400 border-2 bg-gradient-to-r from-zinc-400 to-blue-300 hover:from-zinc-400 text-center content-center">
+				<a href="/services/#personal_shopping" class="border-zinc-400 border-2 bg-gradient-to-r from-zinc-400 to-zinc-400 hover:from-zinc-400 text-center content-center">
 					Personal Shopping</a>
-				<a href="/services/#Closet_Clean_Out" class="border-zinc-400 border-2 bg-gradient-to-l from-zinc-400 to-orange-300 hover:from-zinc-400 text-center content-center">
+				<a href="/services/#Closet_Clean_Out" class="border-zinc-400 border-2 bg-gradient-to-l from-zinc-400 to-zinc-400 hover:from-zinc-400 text-center content-center">
 					Closet Clean Out</a>
-				<a href="/services/#Online_Shopping" class="border-zinc-400 border-2 bg-gradient-to-r from-zinc-400 to-green-300 hover:from-zinc-400 text-center content-center">
+				<a href="/services/#Online_Shopping" class="border-zinc-400 border-2 bg-gradient-to-r from-zinc-400 to-zinc-400 hover:from-zinc-400 text-center content-center">
 					Online Shopping</a>
-				<a href="/services/#Online_Dating" class="border-zinc-400 border-2 bg-gradient-to-l from-zinc-400 to-red-300 hover:from-zinc-400 text-center content-center">
+				<a href="/services/#Online_Dating" class="border-zinc-400 border-2 bg-gradient-to-l from-zinc-400 to-zinc-400 hover:from-zinc-400 text-center content-center">
 					Online Dating</a>
-				<a href="/services/#Photo_Shoot" class="border-zinc-400 border-2 bg-gradient-to-r from-zinc-400 to-teal-300 hover:from-zinc-400 text-center content-center">
-					Photo Shoot</a>
-				<a href="/services/#Teens_Kids" class="border-zinc-400 border-2 bg-gradient-to-l from-zinc-400 to-violet-300 hover:from-zinc-400 text-center content-center">
+				<a href="/services/#Photo_Shoot" class="border-zinc-400 border-2 bg-gradient-to-r from-zinc-400 to-zinc-400 hover:from-zinc-400 text-center content-center">
+					Photo Shoot Styling</a>
+				<a href="/services/#Teens_Kids" class="border-zinc-400 border-2 bg-gradient-to-l from-zinc-400 to-zinc-400 hover:from-zinc-400 text-center content-center">
 					Teens & Kids</a>
-				<a href="/services/#Gifts" class="border-zinc-400 border-2 bg-gradient-to-r from-zinc-400 to-lime-300 hover:from-zinc-400 text-center content-center">
-					Gifts</a>
-				<a href="/services/#A_La_Carte" class="border-zinc-400 border-2 bg-gradient-to-l from-zinc-400 to-fuchsia-300 hover:from-zinc-400 text-center content-center">
+				<a href="/services/#Gifts" class="border-zinc-400 border-2 bg-gradient-to-r from-zinc-400 to-zinc-400 hover:from-zinc-400 text-center content-center">
+					Gift & Holiday Shopping</a>
+				<a href="/services/#A_La_Carte" class="border-zinc-400 border-2 bg-gradient-to-l from-zinc-400 to-zinc-400 hover:from-zinc-400 text-center content-center">
 					A La Carte</a>
 			</div>
 

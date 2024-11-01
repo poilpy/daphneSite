@@ -4,19 +4,19 @@ import Icon from './Icon.astro';
 ---
 
 <aside class="bg-gradient-to-l from-zinc-400 to-zinc-300 space-y-5">
-	<div class="flex md:grid md:grid-cols-3">
-		<h1 class="">Contact me for a free 20 minute consult!</h1>
-		<h2>
+	<div class="grid md:grid-cols-3 gap-10 md:gap-20">
+		<h1 class="text-center md:text-left">Contact me for a free 20 minute consult!</h1>
+		<h2 class="text-center">
 			Voice and Text:<br> <a href="tel:4152180457" class="text-blue-700 hover:text-blue-400">(415) 218-0457</a> 
 			<br>
-			Email: <a href="mailto:hookerdaphne@gmail.com" class="text-blue-700 hover:text-blue-400">hookerdaphne@gmail.com</a>
+			Email:<br> <a href="mailto:hookerdaphne@gmail.com" class="text-blue-700 hover:text-blue-400">hookerdaphne@gmail.com</a>
 		</h2>
-		<h3 class="italic font-semibold text-stone-950">SPECIAL: <p>First time clients who book 3+ hours get 1 hour free of online shopping.</p></h3>
+		<h3 class="text-right text-stone-950">SPECIAL: <p>First time clients who book 3+ hours get 1 hour free of online shopping.</p></h3>
 	</div>
 	<div class="">
 		<CallToAction href="mailto:hookerdaphne@gmail.com">
-			Send Me a Message
-			<Icon icon="paper-plane-tilt" size="1.2em" />
+			GET STARTED NOW | BOOK AN APPOINTMENT
+			<!-- <Icon icon="paper-plane-tilt" size="1.2em" /> -->
 		</CallToAction>
 	</div>
 </aside>
@@ -38,20 +38,17 @@ import Icon from './Icon.astro';
 
 	h1 {
 		font-size: var(--text-xl);
-		text-align: center;
-		max-width: 30ch;
+		/* max-width: 30ch; */
 	}
 
 	h2 {
 		font-size: var(--text-md);
-		text-align: center;
-		max-width: 25ch;
+		/* max-width: 25ch; */
 	}
 
 	h3 {
 		font-size: var(--text-xl);
-		text-align: center;
-		max-width: 35ch;
+		/* max-width: 35ch; */
 	}
 
 	@media (min-width: 50em) {
@@ -65,20 +62,18 @@ import Icon from './Icon.astro';
 
 		h1 {
 			font-size: var(--text-2xl);
-			text-align: left;
-			max-width: 15ch;
+			/* max-width: 15ch; */
 		}
 		
 		h2 {
 			font-size: var(--text-lg);
-			text-align: left;
 		}
 
 		
 		h3 {
 			font-size: var(--text-2xl);
-			text-align: left;
-			max-width: 225ch;
+			/* text-align: left; */
+			/* max-width: 125ch; */
 		}
 
 		p {
