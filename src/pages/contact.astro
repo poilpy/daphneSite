@@ -8,52 +8,39 @@ import Hero from '../components/Hero.astro';
 <BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
 	<div class="stack gap-20">
 		<main class="wrapper about">
-			<Hero
-				title="About"
-				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
-			>
-				<img
-					width="1353"
-					height="1000"
-					src="/assets/DaphneDog.jpg"
-					alt="Jeanine White at work with a colleague"
-				/>
-			</Hero>
+			
 
-			<section>
-				<h2 class="section-title">Background</h2>
-				<div class="content">
-					<p>
-						Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy.
-						Sed do eiusm Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla
-						pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
-					</p>
-					<p>
-						Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
-						natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
-						condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
-						quam elementum pulvinar etiam non.
-					</p>
-					<p>
-						Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet
-						eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
-						Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl
-						pretium fusce.
-					</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Education</h2>
-				<div class="content">
-					<p>Corporis voluptates tenetur laudantium.</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Skills</h2>
-				<div class="content">
-					<p>officia unde omnis</p>
-				</div>
-			</section>
+			<p>
+				Here's an example of a Netlify Form! When you fill this out, the submissions
+				can be found in the Netlify Admin site.
+			  </p>
+			  <div class="feedback-form">
+				<form
+				  data-netlify="true"
+				  netlify-honeypot
+				  name="feedback"
+				  method="POST"
+				  action="/success"
+				>
+				  <p class="hidden">
+					<label>
+					  Don’t fill this out if you’re human: <input name="bot-field" />
+					</label>
+				  </p>
+				  <input type="hidden" name="form-name" value="feedback" />
+				  <label for="name">Name</label>
+				  <input id="name" type="text" name="name" />
+				  <label for="email">Email</label>
+				  <input id="email" type="email" name="email" required />
+				  <label for="feedback">What is your feedback?</label>
+				  <textarea id="feedback" wrap="soft" name="feedback" required></textarea>
+				  <button type="submit">Submit</button>
+				</form>
+			  </div>
+
+
+
+
 		</main>
 
 		<ContactCTA />

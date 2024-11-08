@@ -24,7 +24,7 @@ const servicelinks: { label: string; href: string }[] = [
 ---
 
 
-<nav class="bg-gradient-to-r from-zinc-400 to-zinc-300 border-gray-200 drop-shadow-md">
+<nav class="bg-gradient-to-r from-zinc-400 to-zinc-300 border-gray-200 drop-shadow-md" transition:persist>
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <div class="logo">
             <a href="/" class=" space-x-1 rtl:space-x-reverse flex-auto">
@@ -34,6 +34,7 @@ const servicelinks: { label: string; href: string }[] = [
                 <span class="self-end text-xs libre-caslon-text-regular-italic text-white float-right">personal style consultant</span>
             </a>
         </div>
+
         <button data-collapse-toggle="navbar-dropdown" 
             type="button" 
             class="inline-flex items-center 
@@ -55,16 +56,15 @@ const servicelinks: { label: string; href: string }[] = [
                 <a href="/" class="block py-2 px-3 text-zinc-900 hover:text-zinc-500 md:bg-transparent md:text-zinc-900 md:p-0" aria-current="page">Home</a>
             </li>
             <li>
-                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" 
+                <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" 
                 class="flex items-center justify-between w-full py-2 px-3 text-gray-900 
                 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-zinc-500 md:p-0 
-                md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white 
-                dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Services 
+                md:w-auto">Services 
                 <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                     </svg></button>
                 <!-- Dropdown menu -->
-                <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100  shadow w-44">
+                <div id="dropdownHover" class="z-10 hidden font-normal bg-white divide-y divide-gray-100  shadow w-44">
                     <ul class="py-1 text-sm text-zinc-700 dark:text-zinc-500" aria-labelledby="dropdownLargeButton">
 
                         {
