@@ -1,45 +1,60 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
+
+import { Image } from 'astro:assets';
+
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
 ---
 
 <BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
-	<div class="stack gap-20">
-		<main class="wrapper about">
+	<div class="stack gap-10">
+		<main class="">
 			
 
-			<p>
-				Here's an example of a Netlify Form! When you fill this out, the submissions
-				can be found in the Netlify Admin site.
-			  </p>
-			  <div class="feedback-form">
-				<form
-				  data-netlify="true"
-				  netlify-honeypot
-				  name="feedback"
-				  method="POST"
-				  action="/success"
-				>
-				  <p class="hidden">
-					<label>
-					  Don’t fill this out if you’re human: <input name="bot-field" />
-					</label>
-				  </p>
-				  <input type="hidden" name="form-name" value="feedback" />
-				  <label for="name">Name</label>
-				  <input id="name" type="text" name="name" />
-				  <label for="email">Email</label>
-				  <input id="email" type="email" name="email" required />
-				  <label for="feedback">What is your feedback?</label>
-				  <textarea id="feedback" wrap="soft" name="feedback" required></textarea>
-				  <button type="submit">Submit</button>
-				</form>
-			  </div>
+			<div class="grid justify-center items-center gap-4 p-4">
+				<h2 class="text-zinc-800 text-center">Contact Me</h2>
+				<Image loading="eager"
+						width="400"
+						height="500"
+						src="/assets/DaphneTree.jpg"
+						alt="Jeanine White at work with a colleague"
+					/>
+	
+			</div>
+			<div class="p-4 mx-auto max-w-screen-md">
+				<h2 class="text-center text-4xl">
+					Voice and Text:<br> <a href="tel:4152180457" class="text-blue-700 hover:text-blue-400">(415) 218-0457</a> 
+					<br>
+					Email:<br> <a href="mailto:hookerdaphne@gmail.com" class="text-blue-700 hover:text-blue-400">hookerdaphne@gmail.com</a>
+				</h2>
+			</div>
+			
+			<!--
+			<section class="">
+				<div class="py-4 lg:py-4 px-4 mx-auto max-w-screen-md">
+					<h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us</h2>
+					<p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.</p>
 
-
-
+					<form action="#" class="space-y-8">
+						<div>
+							<label for="email" class="block mb-2 text-lg">Your email</label>
+							<input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5" placeholder="name@email.com" required>
+						</div>
+						<div>
+							<label for="subject" class="block mb-2 text-lg">Subject</label>
+							<input type="text" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 " placeholder="Let us know how we can help you" required>
+						</div>
+						<div class="sm:col-span-2">
+							<label for="message" class="block mb-2 text-lg">Your message</label>
+							<textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 " placeholder="Leave a comment..."></textarea>
+						</div>
+						<button type="submit" class="py-3 px-5 text-sm text-center border-black bg-zinc-400 sm:w-fit hover:bg-zinc-300 focus:ring-4 focus:outline-none focus:ring-primary-300">Send message</button>
+					</form>
+				</div>
+			</section>
+		-->
 
 		</main>
 
@@ -48,62 +63,5 @@ import Hero from '../components/Hero.astro';
 </BaseLayout>
 
 <style>
-	.about {
-		display: flex;
-		flex-direction: column;
-		gap: 3.5rem;
-	}
 
-	img {
-		margin-top: 1.5rem;
-		/* border-radius: 1.5rem; */
-		box-shadow: var(--shadow-md);
-		aspect-ratio: 90 / 100;
-		object-fit: cover;
-		object-position: top;
-	}
-
-	section {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		color: var(--gray-200);
-	}
-
-	.section-title {
-		grid-column-start: 1;
-		font-size: var(--text-xl);
-		color: var(--gray-0);
-	}
-
-	.content {
-		grid-column: 2 / 4;
-	}
-
-	.content :global(a) {
-		text-decoration: 1px solid underline transparent;
-		text-underline-offset: 0.25em;
-		transition: text-decoration-color var(--theme-transition);
-	}
-
-	.content :global(a:hover),
-	.content :global(a:focus) {
-		text-decoration-color: currentColor;
-	}
-
-	@media (min-width: 50em) {
-		.about {
-			display: grid;
-			grid-template-columns: 1fr 60% 1fr;
-		}
-
-		.about > :global(:first-child) {
-			grid-column-start: 2;
-		}
-
-		section {
-			display: contents;
-			font-size: var(--text-lg);
-		}
-	}
 </style>
