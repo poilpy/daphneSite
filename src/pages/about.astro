@@ -7,51 +7,40 @@ import Hero from '../components/Hero.astro';
 
 <BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
 	<div class="stack gap-20">
-		<main class="wrapper about ">
+		<main class="wrapper about grid grid-cols-2">
 			
-		<div class="stack gap-2 box heading">
-			<h2 class="title text-zinc-800 text-center">About</h2>
-			<img
-					width="400"
-					height="500"
-					src="/assets/DaphneTree.jpg"
-					alt="Jeanine White at work with a colleague"
-				/>
-
-		</div>
-
+			<div class="stack gap-2 box heading">
+				<img
+						width="400"
+						height="500"
+						src="/assets/DaphneDog.jpg"
+						alt="Jeanine White at work with a colleague"
+					/>
+				
+					<h2 class="title text-zinc-800 text-center">About Me</h2>
+			</div>
+			
 			<section>
-				<h2 class="section-title">Background</h2>
+				<h2 class="section-title">Background and Experience</h2>
 				<div class="content">
 					<p>
-						Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy.
-						Sed do eiusm Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla
-						pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
-					</p>
-					<p>
-						Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
-						natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
-						condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
-						quam elementum pulvinar etiam non.
-					</p>
-					<p>
-						Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet
-						eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
-						Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl
-						pretium fusce.
+						Born and raised near San Francisco, I’ve always felt very passionate about fashion. Some of my earliest memories involve shopping trips to Saks Fifth Avenue with my grandfather and styling my sisters and friends in addition to myself. This love of fashion and personal expression started at a young age and has never stopped growing.
+						<br><br>
+						After earning my Bachelor of Arts from the University of the Pacific, I continued with my education and pursued my fashion design dreams at the Fashion Institute of Design & Merchandising (FIDM), where I earned an associate degree. During my time at FIDM, and while on breaks from UOP, I worked at Nordstrom and various boutiques, gaining valuable experience in the industry.
+						<br><br>
+						In 1995, I joined Chaiken & Capone (later known as Chaiken), where I spent over a decade refining my craft. At Chaiken, I worked across multiple roles—from stylist to customer service, sales, and shipping—providing me with an in-depth understanding of the fashion industry. My time there also allowed me to work on high-end magazine spreads, television shows, and major films, while traveling frequently to Los Angeles and New York.
+						<br><br>
+						After taking time off to focus on my family and raising my newborn son, I founded *Daphne Styles* in April of 2015, combining my love for fashion with my desire to help others. I approach each project with a “can do” attitude, positive energy, and a sense of humor. 
+						<br><br>
+						My clients range from busy professionals—doctors, executives, and entrepreneurs—to stay-at-home parents, teens, and individuals in transition. I’ve witnessed firsthand how the right wardrobe can transform both self-image and confidence, and it’s a privilege to be part of that journey. Your wardrobe is more than just clothing—it's an expression of who you are and, often, who you want to become. With years of fashion experience, I specialize in helping you discover what silhouettes and styles work best for your unique body and lifestyle, creating a wardrobe that's both authentic and empowering. 
 					</p>
 				</div>
 			</section>
 			<section>
-				<h2 class="section-title">Education</h2>
+				<h2 class="section-title">Why Choose Daphne Styles?</h2>
 				<div class="content">
-					<p>Corporis voluptates tenetur laudantium.</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Skills</h2>
-				<div class="content">
-					<p>officia unde omnis</p>
+					<p>
+						Why choose me over other stylists? I understand that style, body shape, and individual taste are deeply personal, which is why I approach each client with a high degree of sensitivity and respect. Over the years, I've worked with people through different stages of their lives, each with their own needs and preferences. My clients often tell me they appreciate my non-judgmental, thoughtful, and kind approach—qualities I believe are just as important as my fashion expertise. Style is an immediate language; it speaks volumes before you say a word. Let me help you discover yours. I’ll show you how to maximize the potential of your existing wardrobe while giving you the fresh perspective you need to feel rejuvenated.</p>
 				</div>
 			</section>
 		</main>
@@ -80,7 +69,7 @@ import Hero from '../components/Hero.astro';
 		margin-top: 1.5rem;
 		/* border-radius: 1.5rem; */
 		box-shadow: var(--shadow-md);
-		aspect-ratio: 70 / 100;
+		aspect-ratio: 60 / 100;
 		object-fit: cover;
 		object-position: center;
 	}
@@ -89,13 +78,13 @@ import Hero from '../components/Hero.astro';
 		display: flex;
 		flex-direction: column;
 		gap: 0.5rem;
-		color: var(--gray-200);
+		: var(--gray-200);
 	}
 
 	.section-title {
 		grid-column-start: 1;
 		font-size: var(--text-xl);
-		color: var(--gray-0);
+		: var(--gray-0);
 	}
 
 	.content {
@@ -105,12 +94,12 @@ import Hero from '../components/Hero.astro';
 	.content :global(a) {
 		text-decoration: 1px solid underline transparent;
 		text-underline-offset: 0.25em;
-		transition: text-decoration-color var(--theme-transition);
+		transition: text-decoration- var(--theme-transition);
 	}
 
 	.content :global(a:hover),
 	.content :global(a:focus) {
-		text-decoration-color: currentColor;
+		text-decoration-: current;
 	}
 
 	@media (min-width: 50em) {

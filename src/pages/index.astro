@@ -33,13 +33,32 @@ const gallery: { alt: string; src: string }[] = [
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
 ---
+<script>
+	var app = document.getElementById('app');
+
+import Typewriter from 'typewriter-effect/dist/core';
+var typewriter = new Typewriter(app, {
+	loop: true
+});
+
+typewriter.typeString('Effortless')
+	.pauseFor(2200)
+	.deleteAll()
+	.typeString('Timeless')
+	.pauseFor(2200)
+	.deleteAll()
+	.typeString('Personalized')
+	.pauseFor(2200)
+	.deleteAll()
+	.start();
+</script>
 
 <BaseLayout>
 	<div class=" gap-10 lg:gap-10">
 		<div class="  gap-8 lg:gap-20">
 			<header class="hero">
 				
-
+				
 				<Image class="imCover" loading="eager" 
 				
 					alt="Daphne with dog."
@@ -47,17 +66,19 @@ const gallery: { alt: string; src: string }[] = [
 					height="480"
 					src="/assets/bio page 10.jpg"
 					/>
-				
-				<!-- <img class="imCover"
-					alt="Daphne with dog."
-						width="480"
-						height="480"
-						src="/assets/bio page 10.jpg"
-					/> -->
-				<Hero
-					title="Hi!"
-					align="start"
-				>
+				<Hero>
+					<h3 class="text-center text-zinc-800">Style That's</h2> 
+					<div class="text-4xl text-center text-zinc-800" id="app"></div>
+					<p class="p-4 px-20">
+						Whether you’re looking for a seasonal update, a closet cleanout, personal shopping, 
+						fine-tuning your style, or just about anything fashion related, you’ve come to the right place! 
+						<br><br>
+						With my experience, expertise, and personal approach, I’m committed to helping you 
+						feel confident in embracing your unique style. I work with all shapes, sizes, ages, budgets and pronouns.
+						<br><br>
+						Please review my list of services, and if you don’t see what you need, contact me and we can customize a package for you. 
+						Having trouble getting your online dating profile and pictures just right? I can help with that too!
+					</p>
 				</Hero>
 			</header>
 		</div>
@@ -70,7 +91,7 @@ const gallery: { alt: string; src: string }[] = [
 		<section class=" grid bg-gradient-to-l from-white to-zinc-100 gap-4 p-4 md:grid-cols-2">
 			<div>
 				<h2>How It Works:</h2>
-				<p class="md:text-xl p-2">
+				<p class="text-md md:text-xl p-2">
 					Please take a moment to review my list of services and we’ll schedule a free consultation to discuss your needs and get the process started! 
 					I'll email you a brief questionnaire to gather information about your goals, clothing preferences and a little bit about yourself. 
 					<br>

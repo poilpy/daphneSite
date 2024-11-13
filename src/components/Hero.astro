@@ -1,28 +1,12 @@
 ---
-interface Props {
-	title: string;
-	tagline?: string;
-	align?: 'start' | 'center';
-}
 
-const { align = 'center', tagline, title } = Astro.props;
+
 ---
 
-<div class:list={['hero stack gap-4', align]}>
+<div class="hero stack gap-4 start">
 	<div class="stack gap-2 box">
-		<h1 class="title text-zinc-800">{title}</h1>
-		<p class="p-2">
-			Whether you’re looking for a seasonal update, a closet cleanout, personal shopping, 
-			fine-tuning your style, or just about anything fashion related, you’ve come to the right place! 
-			<br><br>
-			With my experience, expertise, and personal approach, I’m committed to helping you 
-			feel confident in embracing your unique style. I work with all shapes, sizes, ages, budgets and pronouns.
-			<br><br>
-			Please review my list of services, and if you don’t see what you need, contact me and we can customize a package for you. 
-			Having trouble getting your online dating profile and pictures just right? I can help with that too!
-		</p>
+		<slot></slot>
 	</div>
-	<slot />
 </div>
 
 <style>
