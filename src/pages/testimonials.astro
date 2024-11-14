@@ -3,6 +3,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
+
+import Grid from '../components/Grid.astro';
+import { Image } from 'astro:assets';
+
+const gallery1: { alt: string; src: string }[] = [
+	{ alt: 'grid1', src: "/assets/testimonials/coat 2.jpg" },
+	{ alt: 'grid2', src: "/assets/testimonials/Dad smiling.jpeg" },
+	{ alt: 'grid4', src: "/assets/testimonials/paseo.jpg" },
+	{ alt: 'grid9', src: "/assets/testimonials/thalia dress.jpg" },
+];
+const gallery2: { alt: string; src: string }[] = [
+	{ alt: 'grid5', src: "/assets/testimonials/rack 6.jpg" },
+	{ alt: 'grid6', src: "/assets/testimonials/Style_Typology_7-19-19-52.jpg" },
+	{ alt: 'grid7', src: "/assets/testimonials/Style_Typology_8-23-19-144.jpg" },
+	{ alt: 'grid8', src: "/assets/testimonials/Style_Typology_Fall_2020-79.jpg" },
+	{ alt: 'grid3', src: "/assets/testimonials/man suit pocket .jpg" },
+];
 ---
 
 <BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
@@ -57,7 +74,7 @@ import Hero from '../components/Hero.astro';
 									<p class="text-base leading-tight"><span class="text-base leading-none italic font-bold text-zinc-400 mr-1">"</span>After becoming a new mom and being new to the area I was in need of a stylist and wardrobe update. I felt that she took the time to get to know me and understand my needs. Shopping was overwhelming for me and Daphne was able to make it an enjoyable experience. After a few trips to Nordstroms and Neiman Marcus she created outfits with my new and existing clothes. Having pictures of all the new looks was very helpful! She did all this for my husband as well. Definitely recommend. <span class="text-base leading-none italic font-bold text-zinc-400 ml-1">"</span></p>
 								</div>
 							</div>
-							<div class="w-full mx-auto rounded-lg bg-zinc-200 drop-shadow-xl p-5 text-zinc-800 font-light mb-6">
+							<!-- <div class="w-full mx-auto rounded-lg bg-zinc-200 drop-shadow-xl p-5 text-zinc-800 font-light mb-6">
 								<div class="w-full flex mb-4 items-center">
 									<div class="flex-grow pl-3">
 										<h6 class="font-bold text-base uppercase text-zinc-600">Erin </h6>
@@ -66,7 +83,7 @@ import Hero from '../components/Hero.astro';
 								<div class="w-full">
 									<p class="text-base leading-tight"><span class="text-base leading-none italic font-bold text-zinc-400 mr-1">"</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto inventore voluptatum nostrum atque, corrupti, vitae esse id accusamus dignissimos neque reprehenderit natus, hic sequi itaque dicta nisi voluptatem! Culpa, iusto.<span class="text-base leading-none italic font-bold text-zinc-400 ml-1">"</span></p>
 								</div>
-							</div>
+							</div> -->
 							<div class="w-full mx-auto rounded-lg bg-zinc-200 drop-shadow-xl p-5 text-zinc-800 font-light mb-6">
 								<div class="w-full flex mb-4 items-center">
 									<div class="flex-grow pl-3">
@@ -88,16 +105,46 @@ import Hero from '../components/Hero.astro';
 								</div>
 								<div class="w-full">
 									<p class="text-base leading-tight"><span class="text-base leading-none italic font-bold text-zinc-400 mr-1">"</span>I can't thank Daphne enough for the incredible experience I had working with her. My closet was a mess, and I was stuck in a style rut. Daphne not only organized my wardrobe, but she also helped me understand what pieces I truly needed and what I could do without. It was like a weight was lifted off my shoulders—my closet is now functional, organized, and filled with clothes I actually love to wear.
-										<br>
-										We then headed to Bloomingdale’s, where she expertly guided me through finding key items that fit my lifestyle and personal style. Daphne knows fashion inside and out and has an amazing eye for what works—she picked out pieces I would never have considered but ended up loving. She made shopping feel effortless, and I felt more confident than ever in my choices.
-										<br>
-										The best part is that Daphne’s approach is so personalized and non-judgmental. She really listened to what I wanted and helped me elevate my style without pushing me out of my comfort zone. I now feel more put-together and excited about getting dressed every day. Highly recommend her to anyone looking to refresh their wardrobe and simplify their style!<span class="text-base leading-none italic font-bold text-zinc-400 ml-1">"</span></p>
+									<br>
+									We then headed to Bloomingdale’s, where she expertly guided me through finding key items that fit my lifestyle and personal style. Daphne knows fashion inside and out and has an amazing eye for what works—she picked out pieces I would never have considered but ended up loving. She made shopping feel effortless, and I felt more confident than ever in my choices.
+									<br>
+									The best part is that Daphne’s approach is so personalized and non-judgmental. She really listened to what I wanted and helped me elevate my style without pushing me out of my comfort zone. I now feel more put-together and excited about getting dressed every day. Highly recommend her to anyone looking to refresh their wardrobe and simplify their style!<span class="text-base leading-none italic font-bold text-zinc-400 ml-1">"</span></p>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>
+
+		<div class="gallery">
+			<Grid variant="small">
+				{
+					gallery1.map(({ alt, src }) => (
+
+								<Image class="imageSpread"
+									alt={alt}
+									width="200"
+									height="300"
+									src={src}
+								/>
+							))
+					}
+			</Grid>
+			<Grid variant="small">
+				{
+					gallery2.map(({ alt, src }) => (
+
+								<Image class="imageSpread"
+									alt={alt}
+									width="200"
+									height="300"
+									src={src}
+								/>
+							))
+					}
+			</Grid>
+
 		</div>
 		</main>
 
@@ -107,4 +154,14 @@ import Hero from '../components/Hero.astro';
 
 <style>
 	/* @import url('https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css') */
+	.imageSpread {
+		aspect-ratio: 3 / 3;
+		object-fit: cover;
+		/* border-radius: 1.5rem; */
+		box-shadow: var(--shadow-md);
+		/* left: 100%; */
+
+		/* animation: 2s scrolling infinite linear;  */
+		/* animation-delay: calc((10s/var(--quantity)) * var(--position) - 1); */
+	}
 </style>

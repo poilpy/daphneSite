@@ -9,9 +9,7 @@ import PortfolioPreview from '../components/PortfolioPreview.astro';
 import Hero from '../components/Hero.astro';
 import Grid from '../components/Grid.astro';
 
-const projects = (await getCollection('work')).sort(
-	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
-);
+
 ---
 
 <BaseLayout
@@ -21,7 +19,7 @@ const projects = (await getCollection('work')).sort(
 	<div class="stack gap-20">
 		<main class="wrapper stack gap-2">
 
-			<div id="Personal_shopping" class="flex w-full gap-4 section">
+			<div id="Personal_shopping" class="flex w-full gap-4 section md:min-h-dvh">
 				<div class="grid h-20 flex-grow desc">
 				<h3>Personal Shopping</h3>
 				<p> To begin our personal shopping experience, we’ll start with the Daphne Styles Questionnaire. 
@@ -45,7 +43,7 @@ const projects = (await getCollection('work')).sort(
 
 			</div>
 
-			<div id="Closet_Clean_Out" class="flex w-full gap-4 section">
+			<div id="Closet_Clean_Out" class="flex w-full gap-4 section md:min-h-dvh">
 				<Image class="im"
 				
 					alt="closet clean out"
@@ -76,7 +74,7 @@ const projects = (await getCollection('work')).sort(
 				</div>
 			</div>
 			
-			<div id="Online_Shopping" class="flex w-full gap-4 section">
+			<div id="Online_Shopping" class="flex w-full gap-4 section md:min-h-dvh">
 				<div class="grid h-20 flex-grow desc">
 				<h3>Online Shopping</h3>
 				<p>
@@ -105,7 +103,7 @@ const projects = (await getCollection('work')).sort(
 
 			</div>
 
-			<div id="Online_Dating" class="flex w-full gap-4 section">
+			<div id="Online_Dating" class="flex w-full gap-4 section md:min-h-dvh">
 				<Image class="im"
 				
 					alt="Personal Shopping"
@@ -124,7 +122,7 @@ const projects = (await getCollection('work')).sort(
 
 			</div>
 
-			<div id="Photo_Shoot" class="flex w-full gap-4 section">
+			<div id="Photo_Shoot" class="flex w-full gap-4 section md:min-h-dvh">
 				<div class="grid h-20 flex-grow desc">
 				<h3>Photo Shoot Styling</h3>
 				<p>I can assist with both personal and fashion photo shoots for occasions such as family portraits, holiday cards, and professional settings like magazines and clothing catalogs.. 	Whether it’s styling for a personal shoot or a high-fashion editorial, I’ll ensure that every outfit aligns with the theme and desired aesthetic.
@@ -143,7 +141,7 @@ const projects = (await getCollection('work')).sort(
 
 			</div>
 
-			<div id="Teens_Kids" class="flex w-full gap-4 section">
+			<div id="Teens_Kids" class="flex w-full gap-4 section md:min-h-dvh">
 				<Image class="im"
 				
 					alt="teens & kids"
@@ -158,7 +156,7 @@ const projects = (await getCollection('work')).sort(
 
 			</div>
 
-			<div id="Gifts" class="flex w-full gap-4 section">
+			<div id="Gifts" class="flex w-full gap-4 section md:min-h-dvh">
 				<div class="grid h-20 flex-grow desc">
 				<h3>Gift & Holiday Shopping </h3>
 				<p>With everyone’s hectic schedules, finding the perfect gift for that special someone can be challenging, especially. Whether you’re a busy mom or a fast-paced executive, I’m here to make the process seamless and enjoyable. I can help you select thoughtful gifts that reflect the recipient’s personality and interests, ensuring your gift stands out.
@@ -175,7 +173,7 @@ const projects = (await getCollection('work')).sort(
 
 			</div>
 
-			<div id="A_La_Carte" class="flex w-full gap-4 section">
+			<div id="A_La_Carte" class="flex w-full gap-4 section md:min-h-dvh">
 				<Image class="im"
 				
 					alt="A La Carte"
@@ -215,6 +213,8 @@ const projects = (await getCollection('work')).sort(
 	.desc {
 		height: auto;
 		margin-top: 2rem;
+		padding-right: 4rem;
+		padding-left: 4rem;
 	}
 
 	.im {
@@ -227,7 +227,7 @@ const projects = (await getCollection('work')).sort(
 	@media (max-width: 50em) {
 		
 		.section {
-			font-size: var(--text-sm);
+			font-size: var(--text-base);
 			margin: 1rem;
 		}
 
