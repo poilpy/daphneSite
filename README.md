@@ -1,7 +1,7 @@
 ## DaphneStyles.com
 
 ```sh
-https://daphnestyles.com
+(https://daphnestyles.com)
 ```
 
 ## 🧞 Commands
