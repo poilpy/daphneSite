@@ -1,7 +1,7 @@
 ## DaphneStyles.com
 
 ```sh
-npm create astro@latest -- --template portfolio
+https://daphnestyles.com
 ```
 
 ## 🧞 Commands
