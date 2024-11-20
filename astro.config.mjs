@@ -6,16 +6,17 @@ import swup from '@swup/astro';
 
 import alpinejs from '@astrojs/alpinejs';
 
+import sitemap from '@astrojs/sitemap';
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [
-    tailwind(), 
-    swup({
-    // @ts-ignore
+  site: 'https://daphnestyles.com',
+  integrations: [tailwind(), swup({
+  // @ts-ignore
     theme: 'fade'
     
 
-    }), 
-    alpinejs(),
-  ]
+    }), alpinejs(), sitemap()]
+
+
 });
